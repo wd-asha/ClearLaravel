@@ -1,0 +1,226 @@
+.slider {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 30rem;
+    overflow: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slides{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.slides-txt {
+    position: absolute;
+    left: 1rem;
+    top: -100%;
+}
+
+.circles {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 2rem;
+    transition: 1s;
+    z-index: 4000;
+    padding: 0 2rem;
+    margin: 0;
+}
+
+.slides-txt-move {
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.chevron-l,
+.chevron-r,
+.circle-l,
+.circle-m,
+.circle-r {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, .9);
+    transition: 1s;
+    margin-right: 1rem;
+}
+
+.i1,
+.i2,
+.i3 {
+    color: rgba(255, 255, 255, .9);
+    transition: .5s;
+}
+
+.chevron-l:hover,
+.chevron-r:hover,
+.i1:hover,
+.i2:hover,
+.i3:hover {
+    color: rgba(255, 255, 255, .8);
+}
+
+.chevron-l {
+    left: 20px;
+    transition: .5s;
+}
+
+.chevron-r {
+    right: 20px;
+    transition: .5s;
+}
+
+.active-slide-1 {
+    background-image: url(../images/plastic1930.jpg);
+}
+
+.active-slide-2 {
+    background-image: url(../images/plastic1910.jpg);
+}
+
+.active-slide-3 {
+    background-image: url(../images/plastic1940.jpg);
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-1-txt,
+.slide-2-txt,
+.slide-3-txt {
+    width: 66.66%;
+    text-align: left;
+    background-color: rgba(255, 255, 255, .9);
+    margin-top: 0;
+    padding: 3rem 2rem 2rem 2rem;
+    transition: .5s;
+    display: block;
+}
+
+.slide-2-txt,
+.slide-3-txt {
+    display: none;
+}
+
+.slide-1-txt {
+    display: block;
+}
+
+
+.slide-1-txt h3,
+.slide-2-txt h3,
+.slide-3-txt h3 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    transition: .5s;
+    color: rgba(0, 93, 105, .7);
+    line-height: 1.5rem;
+}
+
+.slide-1-txt p,
+.slide-2-txt p,
+.slide-3-txt p {
+    margin: 0;
+    font-size: 1.4rem;
+    color: rgba(0, 93, 105, .7);
+    padding: 1.5rem 0;
+}
+
+.slide-1-txt a,
+.slide-2-txt a,
+.slide-3-txt a {
+    background-color: transparent;
+    padding: 1rem 1.25rem 1.25rem 1.25rem;
+    text-decoration: none;
+    color: rgba(0, 93, 105, .8);
+    border: 1px solid rgba(0, 93, 105, .8);
+    transition: .5s;
+    margin: 0;
+    display: inline-block;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+}
+
+.slide-1-txt a:hover,
+.slide-2-txt a:hover,
+.slide-3-txt a:hover {
+    background-color: rgba(0, 93, 105, 1);
+    color: white;
+}
+
+@media only screen and (max-width : 1200px) {
+    .slider {
+        height: calc(10rem + (30 - 10) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .circles {
+        bottom: calc(0rem + (2 - 0) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .circle-l, .circle-m, .circle-r {
+        font-size: calc(2rem + (3 - 2) * ((100vw - 20rem) / (75 - 20)));
+        margin-right: calc(.2rem + (1 - .2) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .slide-1-txt, .slide-2-txt, .slide-3-txt {
+        padding:
+                calc(1rem + (3 - 1) * ((100vw - 20rem) / (75 - 20)))
+                calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)))
+                calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)))
+                calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .slide-1-txt h3, .slide-2-txt h3, .slide-3-txt h3 {
+        font-size: calc(1.2rem + (2 - 1.2) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .slide-1-txt p, .slide-2-txt p, .slide-3-txt p {
+        font-size: calc(.8rem + (1.4 - .8) * ((100vw - 20rem) / (75 - 20)));
+        padding:
+                calc(.5rem + (1.5 - .5) * ((100vw - 20rem) / (75 - 20)))
+                0
+                calc(.8rem + (1.5 - .8) * ((100vw - 20rem) / (75 - 20)))
+                0;
+    }
+
+    .slide-1-txt a, .slide-2-txt a, .slide-3-txt a {
+        font-size: calc(.8rem + (1.3 - .8) * ((100vw - 20rem) / (75 - 20)));
+        padding:
+                calc(.3rem + (1 - .3) * ((100vw - 20rem) / (75 - 20)))
+                calc(.4rem + (1.25 - .4) * ((100vw - 20rem) / (75 - 20)))
+                calc(.4rem + (1.25 - .4) * ((100vw - 20rem) / (75 - 20)))
+                calc(.4rem + (1.25 - .4) * ((100vw - 20rem) / (75 - 20)));
+        /*margin:
+                calc(.2rem + (1 - .2) * ((100vw - 20rem) / (75 - 20)))
+                calc(.2rem + (1 - .2) * ((100vw - 20rem) / (75 - 20)))
+                calc(.2rem + (1 - .2) * ((100vw - 20rem) / (75 - 20)))
+                1rem;*/
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .circles {text-align: right;}
+    .slide-1-txt, .slide-2-txt, .slide-3-txt {margin-left: .3rem;}
+
+}
+
+@media only screen and (max-width : 400px) {
+    .slider {display: none;}
+}

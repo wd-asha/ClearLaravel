@@ -1,0 +1,104 @@
+.services {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 1.5rem auto;
+}
+
+.services-item {
+    width: 31%;
+    padding: 1rem;
+}
+
+.services-item img {
+    width: 100%;
+    border: 1px solid rgba(0, 93, 105, .3);
+}
+
+.services-item h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 2rem 0;
+    color: rgba(0, 93, 105, .8);
+}
+
+.services-item p {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: rgba(0, 93, 105, .8);
+}
+
+.services-item a {
+    background-color: white;
+    border: 1px solid rgba(0, 93, 105, .8);
+    padding: .75rem 1rem 1rem 1rem;
+    text-decoration: none;
+    color: rgba(0, 93, 105, .8);
+    transition: .5s;
+    margin-top: 1.5rem;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.services-item a:hover {
+    background-color: rgba(0, 93, 105, 1);
+    color: white;
+}
+
+@media only screen and (max-width : 1200px) {
+    .services {
+        margin: calc(0rem + (1.5 - 0) * ((100vw - 20rem) / (75 - 20))) auto;
+        padding-bottom: calc(0rem + (1 - 0) * ((100vw - 20rem) / (75 - 20)));
+        padding-top: calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .services-item {
+        padding: calc(.2rem + (1 - .2) * ((100vw - 20rem) / (75 - 20))) 1rem;
+    }
+
+    .services-item h3 {
+        font-size: calc(1.2rem + (2 - 1.2) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(1.4rem + (2.5 - 1.4) * ((100vw - 20rem) / (75 - 20)));
+        margin: calc(.8rem + (2 - .8) * ((100vw - 20rem) / (75 - 20))) 0;
+    }
+
+    .services-item p {
+        font-size: calc(.9rem + (1.1 - .9) * ((100vw - 20rem) / (75 - 20)));
+        margin-top: calc(.2rem + (.5 - .2) * ((100vw - 20rem) / (75 - 20)));;
+    }
+
+    .services-item a {
+        font-size: calc(.9rem + (1.1 - .8) * ((100vw - 20rem) / (75 - 20)));
+        padding:
+                calc(.4rem + (.75 - .4) * ((100vw - 20rem) / (75 - 20)))
+                calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)))
+                calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)))
+                calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)));
+        margin-top: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .services-item {
+        width: 100%;
+    }
+
+    .services-item img {
+        width: 39%;
+        float: right;
+        margin-left: 1rem;
+    }
+
+    .services-item a {
+        margin-top: .8rem;
+    }
+}
+
+@media only screen and (max-width : 730px) {
+    .services-item img {
+        display: none;
+    }
+}

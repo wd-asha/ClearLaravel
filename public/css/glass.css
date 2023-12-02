@@ -1,0 +1,784 @@
+.for-glass {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.for-glass .thumb {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.thumb span {
+    font-size: 1.1rem;
+    color: rgba(0, 93, 105, .8);
+    margin-right: .5rem;
+    transition: .8s;
+}
+
+.thumb a {
+    text-decoration: none;
+    transition: .8s;
+    color: rgba(0, 93, 105, .8);
+}
+
+.thumb a:hover span{
+    color: rgba(0, 93, 105, 1);
+}
+
+.for-glass h2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    color: rgba(0, 93, 105, .8);
+    font-weight: 300;
+    line-height: 2.5rem;
+}
+
+.products-glass,
+.products-new {
+    max-width: 1200px;
+    margin: 3rem auto 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.products-new-item,
+.products-glass-item {
+    width: 31%;
+    margin-bottom: 2rem;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 93, 105, 0);
+    background-color: rgba(0, 93, 105, .8);
+    transition: .5s;
+}
+
+.products-glass-item a,
+.products-new-item a,
+.btn_cartadd {
+    text-decoration: none;
+    align-self: center;
+    padding: .75rem;
+    background-color: white;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.8rem;
+    transition: .5s;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.btn_cartadd img,
+.products-new-item a img,
+.products-glass-item a img {
+    width: 100%;
+}
+.btn_cartadd:hover,
+.products-new-item a:hover,
+.products-glass-item a:hover {
+    transform: scale(1.1);
+}
+
+.product-image {
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+}
+
+.products-new-item-1,
+.products-glass-item-1,
+.products-glass-item-2,
+.products-glass-item-3,
+.products-stone-item-1,
+.products-stone-item-2,
+.products-stone-item-3,
+.products-wood-item-1,
+.products-wood-item-2,
+.products-wood-item-3,
+.products-cleen-item-1,
+.products-cleen-item-2,
+.products-cleen-item-3,
+.products-inventory-item-1,
+.products-inventory-item-2,
+.products-inventory-item-3,
+.products-hoz-item-1,
+.products-hoz-item-2,
+.products-hoz-item-3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    /*height: 14rem;*/
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+.products-new-item-1 img,
+.products-glass-item-1 img,
+.products-glass-item-2 img,
+.products-glass-item-3 img {
+    width: 100%;
+}
+
+.products-stone-item-1 {
+    background-image: url(../images/stone01.jpg);
+}
+
+.products-stone-item-2 {
+    background-image: url(../images/stone02.jpg);
+}
+
+.products-stone-item-3 {
+    background-image: url(../images/stone03.jpg);
+}
+
+.products-wood-item-1 {
+    background-image: url(../images/wood01.jpg);
+}
+
+.products-wood-item-2 {
+    background-image: url(../images/wood02.jpg);
+}
+
+.products-wood-item-3 {
+    background-image: url(../images/wood03.jpg);
+}
+
+.products-cleen-item-1 {
+    background-image: url(../images/cleen01.jpg);
+}
+
+.products-cleen-item-2 {
+    background-image: url(../images/cleen02.jpg);
+}
+
+.products-cleen-item-3 {
+    background-image: url(../images/cleen03.jpg);
+}
+
+.products-inventory-item-1 {
+    background-image: url(../images/inventory01.jpg);
+}
+
+.products-inventory-item-2 {
+    background-image: url(../images/inventory02.jpg);
+}
+
+.products-inventory-item-3 {
+    background-image: url(../images/inventory03.jpg);
+}
+
+.products-hoz-item-1 {
+    background-image: url(../images/hoz01.jpg);
+}
+
+.products-hoz-item-2 {
+    background-image: url(../images/hoz02.jpg);
+}
+
+.products-hoz-item-3 {
+    background-image: url(../images/hoz03.jpg);
+}
+
+.products-new-item:hover,
+.products-glass-item:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.img {
+    transition: .5s;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .33);
+    transition: .5s;
+    border-radius: 0;
+}
+
+.overlay .overlay-new-link,
+.overlay .overlay-link {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay .overlay-new-link img,
+.overlay .overlay-link img {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -25%);
+}
+
+.products-new-item:hover .overlay,
+.products-glass-item:hover .overlay{
+    opacity: 1;
+}
+
+.bar-new {
+    border:1px solid rgba(0, 93, 105, .33);
+    background-color: rgba(204, 255, 204, 1);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    color: rgba(0, 93, 105, 1);
+    display: inline-block;
+    padding: 1rem 1rem 1rem 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: -4px;
+    font-size: 1.1rem;
+    cursor: default;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+}
+
+.bar-hit {
+    border:1px solid rgba(0, 93, 105, .33);
+    background-color: rgba(204, 204, 255, 1);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    color: rgba(0, 93, 105, .8);
+    display: inline-block;
+    padding: 1rem 1rem 1rem 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: -4px;
+    font-size: 1.1rem;
+    cursor: default;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+}
+
+.bar-act {
+    border:1px solid rgba(0, 93, 105, .33);
+    background-color: rgba(255, 255, 204, 1);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    color: rgba(0, 93, 105, .8);
+    display: inline-block;
+    padding: 1rem 1rem 1rem 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: -4px;
+    font-size: 1.1rem;
+    cursor: default;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+}
+
+a.favorites {
+    background-color: rgba(244, 67, 54, .75);
+    display: block;
+    padding: .8rem 1rem 1rem 1rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    height: 3.66rem;
+    line-height: 2.66rem;
+    transition: .8s;
+    border-radius: 50%;
+}
+
+a.favorites:hover {
+    background-color: rgba(244, 67, 54, 1);
+}
+
+a.favorites img {
+    width: 100%;
+    height: auto;
+}
+
+.products-glass-item h3,
+.products-new-item h3,
+.products-new-item p,
+.products-glass-item p {
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+    padding-bottom: 0;
+    transition: .5s;
+}
+
+.products-new-item p,
+.products-glass-item p {
+    font-size: 1.2rem;
+    padding-top: .5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.products-new-item h3,
+.products-glass-item h3 {
+    font-family: 'Oswald-SemiBold', 'Arial', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.products-new-item h2,
+.products-glass-item h2 {
+    font-family: 'Oswald-SemiBold', 'Arial', sans-serif;
+    font-size: 1.8rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    color: lightgreen;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.my-fa {
+    position: absolute;
+    left: 45%;
+    top: 24%;
+    color: rgba(255, 255, 255, .8);
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.categories {
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.hex-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.hex-row.even {
+    margin-left: 5.5rem;
+}
+
+.hex {
+    width: 6.1rem;
+    height: 6.6rem;
+    transition: .5s;
+    margin-right: .5rem;
+    position: relative;
+}
+
+.hex a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 6.6rem;
+    text-transform: uppercase;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.top {
+    width: 0;
+    border-bottom: 1.5rem solid rgba(0, 93, 105, .6);
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    transition: .5s;
+}
+
+.middle {
+    width: 6rem;
+    height: 3.5rem;
+    background: rgba(0, 93, 105, .6);
+    transition: .5s;
+    text-align: center;
+}
+
+.bottom {
+    width: 0;
+    border-top: 1.5rem solid rgba(0, 93, 105, .6);
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    transition: .5s;
+}
+
+.hex.active .top {
+    border-bottom: 1.5rem solid rgba(0, 93, 105, .8);
+}
+
+.hex.active .middle {
+    width: 6rem;
+    height: 3.5rem;
+    background: rgba(0, 93, 105, .8);
+}
+
+.hex.active .bottom {
+    border-top: 1.5rem solid rgba(0, 93, 105, .8);
+}
+
+.hex:hover .top {
+    border-bottom-color: rgba(0, 93, 105, .8);
+}
+.hex:hover .middle {
+    background: rgba(0, 93, 105, .8);
+}
+.hex:hover .bottom {
+    border-top-color: rgba(0, 93, 105, .8);
+}
+
+.overlay a {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.pagin {
+    width: 100%;
+    padding: 0 0 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pagin-item {
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0, 93, 105, .6);
+    margin-right: 1rem;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+    background-color: rgba(0, 93, 105, .6);
+    font-size: 1rem;
+}
+
+.pagin-item-active,
+.pagin-item:hover {
+    background-color: rgba(0, 93, 105, .8);
+}
+
+@media only screen and (max-width : 1200px) {
+    .for-glass {
+        padding:
+                calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)))
+                1rem
+                calc(0rem + (2 - 0) * ((100vw - 20rem) / (75 - 20)))
+                1rem;
+    }
+
+    .for-glass .thumb {
+        padding-top: calc(0rem + (1 - 0) * ((100vw - 20rem) / (75 - 20)))
+    }
+
+    .thumb span {
+        font-size: calc(.8rem + (1.1 - .8) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(1.7rem + (1.5 - 1.7) * ((100vw - 20rem) / (75 - 20)));
+        margin-right: calc(.2rem + (.5 - .2) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .categories {
+        padding-top: calc(1.5rem + (3 - 1) * ((100vw - 20rem) / (75 - 20)));
+        padding-bottom: calc(1rem + (2 - 2) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .for-glass h2 {
+        font-size: calc(1.3rem + (2 - 1.3) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(1.5rem + (2.5 - 1.5) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .products-new {
+        margin:
+                calc(2rem + (3 - 2) * ((100vw - 20rem) / (75 - 20)))
+                0
+                calc(1rem + (3 - 1) * ((100vw - 20rem) / (75 - 20)))
+                0;
+    }
+
+    .products-glass {
+        margin:
+                calc(1rem + (3 - 1) * ((100vw - 20rem) / (75 - 20)))
+                auto
+                calc(0rem + (2 - 0) * ((100vw - 20rem) / (75 - 20)))
+                auto;
+    }
+
+    .products-glass-item {
+        margin-bottom: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .products-glass-item p {
+        font-size: calc(.9rem + (1.2 - .9) * ((100vw - 20rem) / (75 - 20)));
+        padding-top: calc(0rem + (.5 - 0) * ((100vw - 20rem) / (75 - 20)));
+        padding-left: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+        padding-right: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .products-glass-item h3 {
+        font-size: calc(1.1rem + (1.4 - 1.1) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(1.5rem + (1.8 - 1.5) * ((100vw - 20rem) / (75 - 20)));
+        padding-left: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+        padding-right: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+        padding-top: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .products-glass-item h2 {
+        font-size: calc(1.5rem + (1.8 - 1.5) * ((100vw - 20rem) / (75 - 20)));
+        padding-left: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+        padding-bottom: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+        margin-top: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .products-glass-item a {
+        width: calc(3rem + (4 - 3) * ((100vw - 20rem) / (75 - 20)));
+        height: calc(3rem + (4 - 3) * ((100vw - 20rem) / (75 - 20)));
+        font-size: calc(.8rem + (1.8 - .8) * ((100vw - 20rem) / (75 - 20)));
+        bottom: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+        right: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .bar-new, .bar-hit, .bar-act {
+        font-size: calc(.9rem + (1.1 - .9) * ((100vw - 20rem) / (75 - 20)));
+        padding:
+                calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)))
+                calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)))
+                calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)))
+                calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+        top: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .product-image {
+        padding: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .products-new-item-1,
+    .products-glass-item-1,
+    .products-glass-item-2,
+    .products-glass-item-3,
+    .products-stone-item-1,
+    .products-stone-item-2,
+    .products-stone-item-3,
+    .products-wood-item-1,
+    .products-wood-item-2,
+    .products-wood-item-3,
+    .products-cleen-item-1,
+    .products-cleen-item-2,
+    .products-cleen-item-3,
+    .products-inventory-item-1,
+    .products-inventory-item-2,
+    .products-inventory-item-3,
+    .products-hoz-item-1,
+    .products-hoz-item-2,
+    .products-hoz-item-3 {
+        height: calc(8rem + (14 - 8) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .favorites {
+        height: calc(2.33rem + (3.66 - 2.33) * ((100vw - 20rem) / (75 - 20)));
+        padding: calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(2rem + (2.66 - 2) * ((100vw - 20rem) / (75 - 20)));
+        top: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+        left: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .pagin-item {
+        padding: .5rem calc(.8rem + (1 - .8) * ((100vw - 20rem) / (75 - 20)));
+        font-size: calc(.8rem + (1 - .8) * ((100vw - 20rem) / (75 - 20)));
+        margin-right: calc(.25rem + (1 - .25) * ((100vw - 20rem) / (75 - 20)));
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .products-glass-item {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width : 775px) {
+    .hex {
+        width: 5.25rem;
+        height: 5.66rem;
+        margin-right: .25rem;
+    }
+
+    .hex a {
+        font-size: .9rem;
+        line-height: 5.66rem;
+    }
+
+    .top {
+        border-bottom: 1.33rem solid rgba(0, 93, 105, .6);
+        border-left: 2.66rem solid transparent;
+        border-right: 2.66rem solid transparent;
+    }
+
+    .middle {
+        width: 5.25rem;
+        height: 3rem;
+    }
+
+    .bottom {
+        border-top: 1.33rem solid rgba(0, 93, 105, .6);
+        border-left: 2.66rem solid transparent;
+        border-right: 2.66rem solid transparent;
+    }
+
+    .hex.active .top {
+        border-bottom: 1.33rem solid rgba(0, 93, 105, .8);
+    }
+
+    .hex.active .middle {
+        width: 5.25rem;
+        height: 3rem;
+    }
+
+    .hex.active .bottom {
+        border-top: 1.33rem solid rgba(0, 93, 105, .8);
+    }
+}
+
+@media only screen and (max-width : 660px) {
+    .hex {
+        height: 5rem;
+        width: 4.66rem;
+    }
+
+    .hex a {
+        font-size: .8rem;
+        line-height: 5rem;
+    }
+
+    .top {
+        border-bottom: 1.2rem solid rgba(0, 93, 105, .6);
+        border-left: 2.33rem solid transparent;
+        border-right: 2.33rem solid transparent;
+    }
+
+    .middle {
+        width: 4.66rem;
+        height: 2.66rem;
+    }
+
+    .bottom {
+        border-top: 1.2rem solid rgba(0, 93, 105, .6);
+        border-left: 2.33rem solid transparent;
+        border-right: 2.33rem solid transparent;
+    }
+
+    .hex.active .top {
+        border-bottom: 1.2rem solid rgba(0, 93, 105, .8);
+    }
+
+    .hex.active .middle {
+        width: 4.66rem;
+        height: 2.5rem;
+    }
+
+    .hex.active .bottom {
+        border-top: 1.33rem solid rgba(0, 93, 105, .8);
+    }
+}
+
+@media only screen and (max-width : 585px) {
+    .hex {
+        height: 4.4rem;
+        width: 4rem;
+    }
+
+    .hex a {
+        font-size: .7rem;
+        line-height: 4.4rem;
+    }
+
+    .top {
+        border-bottom: 1rem solid rgba(0, 93, 105, .6);
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+    }
+
+    .middle {
+        width: 4rem;
+        height: 2.4rem;
+    }
+
+    .bottom {
+        border-top: 1rem solid rgba(0, 93, 105, .6);
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+    }
+
+    .hex.active .top {
+        border-bottom: 1rem solid rgba(0, 93, 105, .8);
+    }
+
+    .hex.active .middle {
+        width: 4rem;
+        height: 2.4rem;
+    }
+
+    .hex.active .bottom {
+        border-top: 1rem solid rgba(0, 93, 105, .8);
+    }
+}
+
+@media only screen and (max-width : 560px) {
+    .products-glass-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 509px) {
+    .hex:nth-child(4) {
+        margin-right: 9rem;
+    }
+
+    .hex:nth-child(5) {
+        margin-left: 2.1rem;
+        margin-top: -.8rem;
+    }
+
+    .hex:nth-child(6) {
+        margin-top: -.8rem;
+    }
+
+    .hex:nth-child(7) {
+        margin-top: -.8rem;
+    }
+}
+
+@media only screen and (max-width : 450px) {
+    .hex:nth-child(4) {
+        margin-right: 4rem;
+    }
+}
+
+@media only screen and (max-width : 366px) {
+    .hex:nth-child(4) {
+        margin-right: 1rem;
+    }
+}
+
+
+

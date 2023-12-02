@@ -1,0 +1,79 @@
+.search2 {
+    position: relative;
+    width: 100%;
+}
+.magnifying-glass {
+    position: relative;
+    transform: translateX(90%);
+    transition: transform 500ms;
+}
+.search2.active .magnifying-glass {
+    transform: translateX(-7%);
+}
+.magnifying-glass-path {
+    fill:none;
+    stroke-dasharray: 210, 808;
+    stroke-linecap:round;
+    stroke-width: 4px;
+    stroke: rgba( 0, 0, 0, .7);
+    transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+}
+.search2.active .magnifying-glass-path {
+    stroke-dasharray: 580, 808;
+    stroke-dashoffset: -224px;
+}
+.x {
+    fill:none;
+    stroke-dasharray: 56, 92;
+    stroke-dashoffset: -92px;
+    stroke-linecap:round;
+    stroke-width: 4px;
+    stroke: rgba(0, 0, 0, .7);
+    transition: stroke-dashoffset 500ms;
+    visibility: hidden;
+}
+.search2.active .x {
+    visibility: visible;
+}
+.search2.searching .x {
+    stroke-dashoffset: 0;
+}
+.input {
+    border: 0;
+    font-size: 1.2rem;
+    left: 2rem;
+    outline: 0 !important;
+    position: absolute;
+    top: .5rem;
+    font-family: 'Oswald-Regular', 'Arial', sans-serif;
+    color: rgba(0, 0, 0, .7);
+}
+.overlay {
+    background: rgba(0,0,0,0);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    transition: background 300ms;
+}
+.overlay-1 {
+    height: 64px;
+    left: 87%;
+    top: -10px;
+    width: 64px;
+}
+.overlay-2 {
+    height: 38px;
+    left: 82%;
+    top: 0;
+    width: 38px;
+}
+.overlay:hover {
+    /*background: rgba(0,0,0,0.08);*/
+}
+.search2.active .overlay-1 {
+    visibility: hidden;
+}
+.search2:not(.active) .overlay-2,
+.search2:not(.searching) .overlay-2 {
+    visibility: hidden;
+}

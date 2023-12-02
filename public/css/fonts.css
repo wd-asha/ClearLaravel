@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Oswald-SemiBold';
+    src: url('../fonts/Oswald-SemiBold.eot');
+    src: local('Oswald SemiBold'), local('Oswald-SemiBold'),
+    url('../fonts/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-SemiBold.woff') format('woff'),
+    url('../fonts/Oswald-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../fonts/Oswald-Regular.eot');
+    src: local('Oswald Regular'), local('Oswald-Regular'),
+    url('../fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Regular.woff') format('woff'),
+    url('../fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

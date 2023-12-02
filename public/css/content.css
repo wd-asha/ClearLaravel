@@ -1,0 +1,130 @@
+.content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+}
+
+.content-item-left {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    width: 100%;
+}
+
+.content-item-left h3 {
+    font-size: 2rem;
+    color: rgba(0, 93, 105, .7);
+    margin: 0;
+    padding-top: 2rem;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    padding-left: 0;
+}
+
+.content-item-left h4 {
+    margin: 0;
+    padding: .5rem 0;
+    color: rgba(0, 93, 105, .7);
+}
+
+.content-item-left p {
+    margin: 0;
+    padding: .5rem 0;
+    color: rgba(0, 93, 105, .8);
+}
+
+.content-item-right {
+    padding-right: 0;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.content-item-acc div {
+    display: inline-block;
+}
+
+.content-item-acc a {
+    background-color: rgba(0, 188, 212, 1.0);
+    padding: 1rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1.0);
+    transition: .5s;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.content-item-acc a:hover {
+    background-color: rgba(0, 93, 105, 1.0);
+}
+
+.content-item-acc div h4 {
+    color: rgba(0, 93, 105, 1);
+    font-size: 1.4rem;
+    cursor: default;
+    margin: 0;
+    padding: 1rem 0;
+    line-height: 1.2rem;
+}
+
+.content-item-acc div:first-child {
+    width: 86%;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+}
+
+.content-item-acc div:last-child {
+    width: 2rem;
+    height: 2.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-left: 0;
+    margin-top: 1.4rem;
+    color: rgba(0, 188, 212, 1.0);
+    cursor: pointer;
+    transition: .7s;
+}
+
+.plus-minus .fa-slogan {
+    margin-top: .2rem;
+}
+
+.acc-p {
+    padding: 0;
+    margin: 0;
+    display: none;
+    color: rgba(0, 93, 105, 1);
+}
+
+@media only screen and (max-width : 1200px) {
+    .content {
+        margin: calc(.5rem + (2 - .5) * ((100vw - 20rem) / (75 - 20))) auto;
+    }
+
+    .content-item-left {
+        padding-bottom: calc(0rem + (1 - 0) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .content-item-left h3 {
+        font-size: calc(1.3rem + (2 - 1.3) * ((100vw - 20rem) / (75 - 20)));
+        padding-top: calc(0rem + (2 - 0) * ((100vw - 20rem) / (75 - 20)));
+        padding-bottom: calc(0rem + (1 - 0) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .content-item-left h4 {
+        font-size: calc(.9rem + (1.1 - .9) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .content-item-left p {
+        font-size: calc(.9rem + (1.1 - .9) * ((100vw - 20rem) / (75 - 20)));
+        padding: calc(.2rem + (.5 - .2) * ((100vw - 20rem) / (75 - 20))) 0;
+    }
+
+
+}

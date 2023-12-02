@@ -1,0 +1,499 @@
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone i,
+.location i {
+    font-size: 1.25rem;
+    padding-right: .5rem;
+}
+
+.phone span,
+.location span {
+    font-size: 1.2rem;
+    padding: .25rem 0;
+    display: inline-block;
+}
+
+.phone, .location, .contacts {
+    align-self: center;
+    color: rgba(0, 93, 105, 1);
+    line-height: 1.5rem;
+}
+
+.fa-social {
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: pink;
+    text-align: center;
+    padding: .1rem .2rem .1rem .3rem;
+    margin-left: .8rem;
+    background-color: rgba(0, 93, 105, .6);
+    color: rgba(255, 255, 255, 1.0);
+    transition: .8s;
+ }
+
+.fa-social:hover {
+    cursor: pointer;
+    background-color: rgba(0, 93, 105, 1);
+}
+
+.logo {
+    width: 33%;
+}
+.contacts {
+    width: 33%;
+}
+.social {
+    width: 33%;
+    text-align: right;
+}
+
+.header-item .logo-icon, .header-item .logo-slogan {
+    display: inline-block;
+}
+
+.logo-icon {
+    border-right: 2px solid #00bcd4;
+    color: #00bcd4;
+    padding: 0 1rem 0 0;
+    margin: 0;
+    font-size: 3.66rem;
+    line-height: 1.4rem;
+    vertical-align: top;
+    text-align: left;
+    height: 92%;
+}
+
+.logo-slogan h1 {
+    font-size: 4rem;
+    color: #00bcd4;
+    margin: 0;
+    padding: 0 .5rem;
+    line-height: 3rem;
+    font-family: cursive, 'Oswald-SemiBold', 'Arial', sans-serif;
+    text-align: left;
+}
+
+.logo-slogan h3 {
+    font-family: 'Oswald-SemiBold', 'Arial', sans-serif;
+    color: #00bcd4;
+    padding: .5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+    line-height: 1.3rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.bg-nav {
+    background-color: rgba(0, 93, 105, .8)
+}
+
+.navigation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation ul {
+    width: 70%;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.navigation ul li a {
+    border-left: 1px solid rgba(255, 255, 255, .5);
+}
+
+.navigation ul li:last-child {
+    border-right: 1px solid rgba(255, 255, 255, .5);
+}
+
+.navigation ul li a {
+    color: rgba(255, 255, 255, 1.0);
+    text-decoration: none;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    margin-left: -4px;
+    transition: .8s;
+}
+
+.navigation ul li a.active,
+.navigation ul li a:hover {
+    background-color: rgba(0, 93, 105, 1);
+    transition: .8s;
+}
+
+.mobile-nav {
+    width: 50%;
+    text-align: left;
+    display: none;
+}
+
+.mobile-nav label {
+    text-align: left;
+    height: 100%;
+}
+
+.cabinet {
+    width: 30%;
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    height: 5.1rem;
+}
+
+.cabinet-user,
+.cabinet-favorites,
+.cabinet-cart {
+    height: 100%;
+    cursor: pointer;
+    transition: .8s;
+    border-left: 1px solid rgba(255, 255, 255, .5);
+}
+
+.cabinet-cart {
+    border-right: 1px solid rgba(255, 255, 255, .5);
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    width: 33%;
+    height: 33%;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: rgba(244, 67, 54, 1);
+    color: white;
+    top: -2px;
+    right: 2px;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.cabinet-user img,
+.cabinet-favorites img,
+.cabinet-cart img {
+    height: 100%;
+    opacity: 1;
+    transition: .5s;
+    padding: 1.66rem;
+}
+
+.cabinet-user:hover,
+.cabinet-favorites:hover,
+.cabinet-cart:hover {
+    background-color: rgba(0, 93, 105, 1);
+}
+
+.visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.hamburger {
+    margin: 0;
+    width: 4rem;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.hamburger:hover .bar,
+.hamburger:hover .bar:before,
+.hamburger:hover .bar:after {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: .6rem;
+    background-color: rgba(255, 255, 255, 1.0);
+    display: block;
+    border-radius: .3rem;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger .bar:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top: 200%;
+    background-color: rgba(255, 255, 255, 1.0);
+    transition: .4s;
+    border-radius: .3rem;
+}
+
+.hamburger .bar:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top: -200%;
+    background-color: rgba(255, 255, 255, 1.0);
+    transition: .4s;
+    border-radius: .2rem;
+}
+
+    .checkbox4:checked + label > .hamburger4 > .bar1 {
+        top: 14px;
+        background-color: transparent;
+    }
+
+    .checkbox4:checked + label > .hamburger4 > .bar2 {
+        left: 6px;
+        width: 40px;
+        transform: rotate(45deg);
+    }
+
+    .checkbox4:checked + label > .hamburger4 > .bar3 {
+        left: 6px;
+        width: 40px;
+        transform: rotate(-45deg);
+    }
+
+    .checkbox4:checked + label > .hamburger4 > .bar4 {
+        background-color: transparent;
+    }
+
+    .checkbox4:checked + label > .hamburger4 > .bar5 {
+        bottom: 14px;
+        background-color: transparent;
+    }
+
+.mobile-menu {
+    width: 100%;
+    background-color: #00bcd4;
+    position: absolute;
+    top: -120%;
+    transition: .8s;
+    z-index: 5002;
+    padding: 1rem;
+}
+
+.mobile-menu-down {
+    top: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    font-size: 2rem;
+    line-height: 4.5rem;
+    top: 0;
+    right: 4%;
+    color: rgba(255, 255, 255, .8);
+    transition: .5s;
+}
+
+.mobile-menu-close:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+    .mobile-menu ul li {
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        font-size: 1.4em;
+        padding: 2% 0 3% 0;
+        text-align: center;
+    }
+
+.mobile-menu ul li:first-child {
+    padding: 2% 0 3% 0;
+}
+
+.mobile-menu ul li:hover {
+    background-color: rgba(0, 93, 105, .8);
+    transition: .8s;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+.active-menu {
+    background-color: rgba(0, 93, 105, 1);
+}
+
+@media only screen and (max-width : 1200px) {
+    header {
+        padding-top: calc(.66rem + (2 - .66) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .phone, .location, .contacts {
+        line-height: calc(1.33rem + (1.5 - 1.33) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .phone span,
+    .location span {
+        font-size: calc(.9rem + (1.2 - .9) * ((100vw - 20rem) / (75 - 20)));
+        padding: calc(0rem + (.25 - 0) * ((100vw - 20rem) / (75 - 20))) 0;
+    }
+
+    .logo-slogan h3 {
+        font-size: calc(.8rem + (1.1 - .8) * ((100vw - 20rem) / (75 - 20)));
+        margin-top: calc(.25rem + (1 - .25) * ((100vw - 20rem) / (75 - 20)));
+        margin-bottom: calc(.66rem + (1 - .66) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(1rem + (1.3 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .logo-slogan h1 {
+        font-size: calc(3rem + (4 - 3) * ((100vw - 20rem) / (75 - 20)));
+        padding-left: calc(.25rem + (.5 - .25) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .logo-icon {
+        font-size: calc(3rem + (3.66 - 3) * ((100vw - 20rem) / (75 - 20)));
+        padding-right: calc(.5rem + (1 - .5) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .phone i,
+    .location i {
+        font-size: calc(.9rem + (1.25 - .9) * ((100vw - 20rem) / (75 - 20)));
+        padding-right: calc(.2rem + (.5 - .2) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    nav ul li {
+        padding-top: calc(.5rem + (1.5 - .5) * ((100vw - 20rem) / (75 - 20)));;
+        padding-bottom: calc(.5rem + (1.5 - .5) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    nav ul li a {
+        font-size: calc(.8rem + (1.4 - .8) * ((100vw - 20rem) / (75 - 20)));
+        padding: calc(.5rem + (1.5 - .5) * ((100vw - 20rem) / (75 - 20))) calc(.54rem + (1.5 - .54) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .cabinet {
+        height: calc(2.3rem + (5.1 - 2.3) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .cabinet-user img, .cabinet-favorites img, .cabinet-cart img {
+        padding: calc(.6rem + (1.66 - .6) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .hamburger {
+        width: calc(2rem + (3 - 2) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .hamburger .bar {
+        height: calc(.3rem + (.6 - .3) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .mobile-menu-close {
+        line-height: calc(2.5rem + (4.5 - 2.5) * ((100vw - 20rem) / (75 - 20)));;
+    }
+
+    .cart-count {
+        font-size: calc(.55rem + (1 - .55) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(.8rem + (1.5 - .8) * ((100vw - 20rem) / (75 - 20)));
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .social {
+        display: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .contacts {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    nav ul {
+        display: none;
+    }
+
+    .cabinet {
+        width: 50%;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    #logo-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .social {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-slogan h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contacts {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,423 @@
+@import "fonts.css";
+@import "header.css";
+@import "slider.css";
+@import "services.css";
+@import "products-new.css";
+@import "content.css";
+@import "products.css";
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    border-top: 6px solid rgba(0, 93, 105, .6);
+    font-family: 'Oswald-Regular', 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+.body_hide {
+    opacity: 0;
+    transition: .9s opacity ease-in-out;
+}
+.body_visible {
+    opacity: 1;
+}
+
+.bg-slogan, .bg-slogan2 {
+    background-color: #00bcd4;
+}
+
+.slogan {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.slogan2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+}
+
+.slogan h3,
+.slogan p,
+.slogan a,
+.slogan2 h3,
+.slogan2 p,
+.slogan2 a{
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.slogan-left, .slogan2-left {
+    width: 66%;
+    margin-right: 2rem;
+}
+
+.slogan h3, .slogan2 h3 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 2.5rem;
+    padding-right: 1rem;
+    font-weight: 300;
+}
+
+.slogan p, .slogan2 p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: .5rem 0 1rem 0;
+    font-weight: 300;
+}
+
+.slogan a, .slogan2 a {
+    text-decoration: none;
+    align-self: center;
+    padding: .75rem 1rem 1rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 1.0);
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 1.3rem;
+    transition: .5s;
+}
+
+.slogan a:hover, .slogan2 a:hover {
+    color: #00bcd4;
+    background-color: white;
+}
+
+.my-fa {
+    position: absolute;
+    left: 45%;
+    top: 24%;
+    color: rgba(255, 255, 255, .8);
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.bg-footer {
+    background-color: rgba(0, 93, 105, .8);
+}
+
+.footer {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-item-policy {
+    width: 30%;
+}
+
+.footer-item {
+    width: 15%;
+}
+
+.footer-item-form {
+    width: 30%;
+    text-align: right;
+}
+
+.footer-item-form form {
+    margin: 0;
+    padding: 1rem 0 0 0;
+    text-align: right;
+}
+
+.footer-item-form input.footer-input {
+    width: 100%;
+    padding: .5rem;
+    font-family: 'Oswald-Regular', 'Arial', sans-serif;
+    font-size: 1rem;
+    color: rgba(0, 93, 105, .8);
+    background-color: white;
+    border: none;
+    outline: none;
+}
+
+.footer-item-form button.footer-btn {
+    padding: .5rem 1rem;
+    font-family: 'Oswald-Regular', 'Arial', sans-serif;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.footer-item-form button.footer-btn:hover {
+    background-color: rgba(255, 255, 255, .8);
+    color: rgba(0, 93, 105, .8);
+}
+
+.footer-item a,
+.footer-item-policy a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: .5rem 0;
+    transition: .5s;
+    font-size: 1rem;
+}
+
+.footer-item-policy2 {
+    width: 100%;
+    justify-content: space-between;
+    display: none;
+}
+
+.footer-item-policy2 a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: .5rem 0;
+    transition: .5s;
+}
+
+.footer-item-policy2 a:first-child {
+    width: 66%;
+    text-align: left;
+}
+.footer-item-policy2 a:last-child {
+    width: 33%;
+    text-align: right;
+}
+
+.footer-item a:hover {
+    opacity: .8;
+}
+
+.copyright {
+    text-align: center;
+    padding: .1rem;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.copyright a {
+    color: rgba(255, 255, 255, .8);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-decoration: none;
+    transition: .7s;
+    margin: 0;
+    padding: 0;
+}
+
+.copyright a:hover {
+    color: rgba(255, 255, 255, 1.0);
+}
+#toTop {
+    color: rgba(0, 0, 0, .4);
+    text-align: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: none;
+    font-size: calc(2.72rem + 1.7vw);
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+#toTop:hover {
+    color: rgba(0, 0, 0, .8);
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+}
+.preloader .loader {
+    height: 4.66rem;
+    width: 100%;
+    line-height: 4.66rem;
+    text-align: center;
+    font-size: 4.66rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.imgs-none {
+    display: none;
+}
+
+.sorry {
+    display: none;
+}
+
+.sorry p {
+    padding: 24px;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1200px) {
+    .preloader .loader {
+        font-size: calc(2.66rem + (4.66 - 2.66) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .slogan, .slogan2 {
+        padding: calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .slogan h3, .slogan2 h3 {
+        font-size: calc(1.2rem + (2 - 1.2) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(1.5rem + (2.5 - 1.5) * ((100vw - 20rem) / (75 - 20)));
+        padding-right: calc(0rem + (1 - 0) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .slogan p, .slogan2 p {
+        font-size: calc(.9rem + (1.2 - .9) * ((100vw - 20rem) / (75 - 20)));
+        line-height: calc(1.2rem + (1.5 - 1.2) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .slogan a, .slogan2 a {
+        font-size: calc(1rem + (1.3 - 1) * ((100vw - 20rem) / (75 - 20)));
+        padding:
+                calc(.5rem + (.75 - .5) * ((100vw - 20rem) / (75 - 20)))
+                calc(.66rem + (1 - .66) * ((100vw - 20rem) / (75 - 20)))
+                calc(.66rem + (1 - .66) * ((100vw - 20rem) / (75 - 20)))
+                calc(.66rem + (1 - .66) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .footer {
+        padding: calc(1rem + (3 - 1) * ((100vw - 20rem) / (75 - 20))) calc(1rem + (2 - 1) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .footer-item a, .footer-item-policy a {
+        padding: calc(.2rem + (.5 - .2) * ((100vw - 20rem) / (75 - 20))) 0;
+        font-size: calc(.8rem + (1 - .8) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .footer-item-policy a, .footer-item-policy2 a {
+        font-size: calc(.8rem + (1 - .8) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .footer-item-form input.footer-input {
+        font-size: calc(.8rem + (1 - .8) * ((100vw - 20rem) / (75 - 20)));
+        padding: calc(.33rem + (.5 - .33) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .footer-item-form button.footer-btn {
+        font-size: calc(.9rem + (1 - .9) * ((100vw - 20rem) / (75 - 20)));
+    }
+
+    .copyright a {
+        font-size: calc(.7rem + (1 - .7) * ((100vw - 20rem) / (75 - 20)));;
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .footer-item-policy {
+        display: none;
+    }
+
+    .footer-item-policy2 {
+        display: flex;
+    }
+
+    .footer-item, .footer-item-form {
+        width: 30%;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .footer-item-policy, .footer-item, .footer-item-form {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-item-policy2 {
+        display: none;
+    }
+
+    .footer-item-form form {
+        text-align: center;
+        width: 66%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width : 530px) {
+    .slogan-left, .slogan2-left {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .slogan2 {display: flex;}
+    .slogan .slogan-left {display: none;}
+}
+
+@media all and (max-width: 319px) {
+    .sorry {
+        display: block;
+    }
+}
+
+ul.pagination {
+    width: 100%;
+    padding: 0 0 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.pagination li.page-item {
+    display: block;
+}
+
+.pagination .page-link {
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0, 93, 105, .6);
+    margin-right: .5rem;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+    background-color: rgba(0, 93, 105, .6);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.pagination li .page-link:hover {
+    background-color: rgba(0, 93, 105, .8);
+    color: white;
+}
+
+.pagination li.active > .page-link{
+    background-color: rgba(0, 93, 105, .8);
+}
